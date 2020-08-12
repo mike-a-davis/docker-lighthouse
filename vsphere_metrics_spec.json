@@ -1,0 +1,631 @@
+{
+  "type": "kafka",
+  "spec": {
+    "dataSchema": {
+      "dataSource": "vsphere_metrics",
+      "timestampSpec": {
+        "column": "timestamp",
+        "format": "millis",
+        "missingValue": null
+      },
+      "dimensionsSpec": {
+        "dimensions": [
+          {
+            "type": "long",
+            "name": "bytesRx_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "bytesTx_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "connect_ns",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "coreUtilization_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "costop_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "demand_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "discover_ns",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "discovered_objects",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "esxhostname",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "gather_count",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "gather_duration_ns",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "gather_time_ns",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "guest",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "string",
+            "name": "host",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "idle_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "input",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "string",
+            "name": "interface",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "latency_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "metric",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "metrics_gathered",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "moid",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "string",
+            "name": "os",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "read_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "readiness_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "ready_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "resourcetype",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "run_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "source",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "usage_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "used_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "utilization_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "vcenter",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "string",
+            "name": "vmname",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "long",
+            "name": "wait_summation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "write_average",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          }
+        ],
+        "dimensionExclusions": [
+          "timestamp"
+        ]
+      },
+      "metricsSpec": [],
+      "granularitySpec": {
+        "type": "uniform",
+        "segmentGranularity": "HOUR",
+        "queryGranularity": {
+          "type": "none"
+        },
+        "rollup": false,
+        "intervals": null
+      },
+      "transformSpec": {
+        "filter": null,
+        "transforms": []
+      }
+    },
+    "ioConfig": {
+      "topic": "vsphere_metrics",
+      "inputFormat": {
+        "type": "json",
+        "flattenSpec": {
+          "useFieldDiscovery": true,
+          "fields": []
+        },
+        "featureSpec": {}
+      },
+      "replicas": 1,
+      "taskCount": 1,
+      "taskDuration": "PT3600S",
+      "consumerProperties": {
+        "bootstrap.servers": "172.24.1.40:9092",
+        "ssl.protocol": "PLAINTEXT"
+      },
+      "pollTimeout": 100,
+      "startDelay": "PT5S",
+      "period": "PT30S",
+      "useEarliestOffset": true,
+      "completionTimeout": "PT1800S",
+      "lateMessageRejectionPeriod": null,
+      "earlyMessageRejectionPeriod": null,
+      "lateMessageRejectionStartDateTime": null,
+      "stream": "vsphere_metrics",
+      "useEarliestSequenceNumber": true
+    },
+    "tuningConfig": {
+      "type": "kafka",
+      "maxRowsInMemory": 1000000,
+      "maxBytesInMemory": 0,
+      "maxRowsPerSegment": 5000000,
+      "maxTotalRows": null,
+      "intermediatePersistPeriod": "PT10M",
+      "basePersistDirectory": "/opt/apache-druid-0.18.1/var/tmp/druid-realtime-persist70387337067673749",
+      "maxPendingPersists": 0,
+      "indexSpec": {
+        "bitmap": {
+          "type": "roaring",
+          "compressRunOnSerialization": true
+        },
+        "dimensionCompression": "lz4",
+        "metricCompression": "lz4",
+        "longEncoding": "longs"
+      },
+      "indexSpecForIntermediatePersists": {
+        "bitmap": {
+          "type": "roaring",
+          "compressRunOnSerialization": true
+        },
+        "dimensionCompression": "lz4",
+        "metricCompression": "lz4",
+        "longEncoding": "longs"
+      },
+      "buildV9Directly": true,
+      "reportParseExceptions": false,
+      "handoffConditionTimeout": 0,
+      "resetOffsetAutomatically": false,
+      "segmentWriteOutMediumFactory": null,
+      "workerThreads": null,
+      "chatThreads": null,
+      "chatRetries": 8,
+      "httpTimeout": "PT10S",
+      "shutdownTimeout": "PT80S",
+      "offsetFetchPeriod": "PT30S",
+      "intermediateHandoffPeriod": "P2147483647D",
+      "logParseExceptions": false,
+      "maxParseExceptions": 2147483647,
+      "maxSavedParseExceptions": 0,
+      "skipSequenceNumberAvailabilityCheck": false,
+      "repartitionTransitionDuration": "PT120S"
+    }
+  },
+  "dataSchema": {
+    "dataSource": "vsphere_metrics",
+    "timestampSpec": {
+      "column": "timestamp",
+      "format": "millis",
+      "missingValue": null
+    },
+    "dimensionsSpec": {
+      "dimensions": [
+        {
+          "type": "long",
+          "name": "bytesRx_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "bytesTx_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "connect_ns",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "coreUtilization_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "costop_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "demand_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "discover_ns",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "discovered_objects",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "esxhostname",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "gather_count",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "gather_duration_ns",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "gather_time_ns",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "guest",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "string",
+          "name": "host",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "idle_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "input",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "string",
+          "name": "interface",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "latency_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "metric",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "metrics_gathered",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "moid",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "string",
+          "name": "os",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "read_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "readiness_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "ready_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "resourcetype",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "run_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "source",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "usage_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "used_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "utilization_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "string",
+          "name": "vcenter",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "string",
+          "name": "vmname",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": true
+        },
+        {
+          "type": "long",
+          "name": "wait_summation",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        },
+        {
+          "type": "long",
+          "name": "write_average",
+          "multiValueHandling": "SORTED_ARRAY",
+          "createBitmapIndex": false
+        }
+      ],
+      "dimensionExclusions": [
+        "timestamp"
+      ]
+    },
+    "metricsSpec": [],
+    "granularitySpec": {
+      "type": "uniform",
+      "segmentGranularity": "HOUR",
+      "queryGranularity": {
+        "type": "none"
+      },
+      "rollup": false,
+      "intervals": null
+    },
+    "transformSpec": {
+      "filter": null,
+      "transforms": []
+    }
+  },
+  "tuningConfig": {
+    "type": "kafka",
+    "maxRowsInMemory": 1000000,
+    "maxBytesInMemory": 0,
+    "maxRowsPerSegment": 5000000,
+    "maxTotalRows": null,
+    "intermediatePersistPeriod": "PT10M",
+    "basePersistDirectory": "/opt/apache-druid-0.18.1/var/tmp/druid-realtime-persist70387337067673749",
+    "maxPendingPersists": 0,
+    "indexSpec": {
+      "bitmap": {
+        "type": "roaring",
+        "compressRunOnSerialization": true
+      },
+      "dimensionCompression": "lz4",
+      "metricCompression": "lz4",
+      "longEncoding": "longs"
+    },
+    "indexSpecForIntermediatePersists": {
+      "bitmap": {
+        "type": "roaring",
+        "compressRunOnSerialization": true
+      },
+      "dimensionCompression": "lz4",
+      "metricCompression": "lz4",
+      "longEncoding": "longs"
+    },
+    "buildV9Directly": true,
+    "reportParseExceptions": false,
+    "handoffConditionTimeout": 0,
+    "resetOffsetAutomatically": false,
+    "segmentWriteOutMediumFactory": null,
+    "workerThreads": null,
+    "chatThreads": null,
+    "chatRetries": 8,
+    "httpTimeout": "PT10S",
+    "shutdownTimeout": "PT80S",
+    "offsetFetchPeriod": "PT30S",
+    "intermediateHandoffPeriod": "P2147483647D",
+    "logParseExceptions": false,
+    "maxParseExceptions": 2147483647,
+    "maxSavedParseExceptions": 0,
+    "skipSequenceNumberAvailabilityCheck": false,
+    "repartitionTransitionDuration": "PT120S"
+  },
+  "ioConfig": {
+    "topic": "vsphere_metrics",
+    "inputFormat": {
+      "type": "json",
+      "flattenSpec": {
+        "useFieldDiscovery": true,
+        "fields": []
+      },
+      "featureSpec": {}
+    },
+    "replicas": 1,
+    "taskCount": 1,
+    "taskDuration": "PT3600S",
+    "consumerProperties": {
+      "bootstrap.servers": "172.24.1.40:9092",
+      "ssl.protocol": "PLAINTEXT"
+    },
+    "pollTimeout": 100,
+    "startDelay": "PT5S",
+    "period": "PT30S",
+    "useEarliestOffset": true,
+    "completionTimeout": "PT1800S",
+    "lateMessageRejectionPeriod": null,
+    "earlyMessageRejectionPeriod": null,
+    "lateMessageRejectionStartDateTime": null,
+    "stream": "vsphere_metrics",
+    "useEarliestSequenceNumber": true
+  },
+  "context": null,
+  "suspended": false
+}
